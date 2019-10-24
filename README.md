@@ -1,7 +1,7 @@
 # Test Project
 In this project are implemented tests for the searching functionality in https://en.wikipedia.org/ site. In this project were implemented tests according BDD approach.
 
-## Test Automation architecture consists of 4 layers
+## Test Automation FW architecture consists of 4 layers
 1. Features
 2. Runner
 3. Page Objects
@@ -9,14 +9,14 @@ In this project are implemented tests for the searching functionality in https:/
 
 
 ## Why BDD?
-There are many advantages of BDD. First of all it allows managers, developers and testers communicate more efficiently. Also the beheavioral approach defines acceptence criteria prior to developer.
+There are many advantages of BDD. First of all it allows managers, developers and testers communicate more efficiently. Also the behavioural approach defines acceptance criteria prior to developer.
 
 
 ## Tools
-  - **Junit** allows us to run tests
-  - **Serenity BDD Framework** allows us get the informative reports about scenarios runs
-  - **Cucmber** allows us run the human readable test cases writing in Gherkin
-  - **Gradle** is open-source build and automation tool. Thanks to Gradle we can get very scalable and high-performance builds. Also, it's very easy to use.
+  - **Junit** is a open-source unit testing framework for Java programming language. Allows us to run tests and create assertions
+  - **Serenity BDD Framework** is open-source framework which allows us to create cleaner and maintainable automated acceptance and regression tests. Provides comprehensive reports on test results with Selenium WebDriver
+  - **Cucumber** supports Behaviour-Driven Development (BDD). It reads executable specifications written in plain text and validates that the software does what those specifications say with using of some basic syntax rules, called Gherkin.
+  - **Gradle** is an open-source build automation tool focused on flexibility and performance. Thanks to Gradle we can get very scalable and high-performance builds. Also, it's very easy to use.
 
 #### Example of feature:
 ```
@@ -50,8 +50,8 @@ public class PositiveTestsRunner {
 ```
 
 
-## How to axecute
+## How to execute
 1. Clone project
 2. Run gradle.build file
 3. Open in browser report index.html into folder target/site/serenity
-5. In addition, you can run tests with runners from test/java/runners package
+4. In addition, you can run test suites with runners from test/java/runners package

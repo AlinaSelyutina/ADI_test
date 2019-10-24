@@ -27,10 +27,10 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
     When I search for <query>
     Then I get error message <error message>
 
-    Examples:
-      | query            | error message                            |
-      | edealsdfjself    | There were no results matching the query.|
-      | edealsdf123jself | There were no results matching the query.|
+        Examples:
+          | query            | error message                            |
+          | edealsdfjself    | There were no results matching the query.|
+          | edealsdf123jself | There were no results matching the query.|
 ```
 
 #### Example of Runner class:

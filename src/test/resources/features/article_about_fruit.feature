@@ -7,10 +7,10 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
     And I press Enter
     Then I get article with title <title>
 
-    Examples:
-      | query     | title     |
-      | Carambola | Carambola |
-      | Apple     | Apple     |
+  Examples:
+    |query     |title     |
+    |Carambola |Carambola |
+    |Apple     |Apple     |
 
   @PositiveRegressionSuit
   Scenario Outline: Finding article by search
@@ -19,10 +19,10 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
     And I press the search button
     Then I get article with title <title>
 
-    Examples:
-      | query     | title        |
-      | Carambola | Carambola    |
-      | Apple     | Apple        |
+  Examples:
+    |query     |title        |
+    |Carambola |Carambola    |
+    |Apple     |Apple        |
 
 
   @NegativeRegressionSuit
@@ -32,10 +32,10 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
     And I press Enter
     Then I get error message <error message>
 
-    Examples:
-      | query           |error message                            |
-      | edealsdfjself   |There were no results matching the query.|
-      | edealsdf123jself|There were no results matching the query.|
+  Examples:
+    |query           |error message                            |
+    |edealsdfjself   |There were no results matching the query.|
+    |edealsdf123jself|There were no results matching the query.|
 
   @PositiveRegressionSuit
   Scenario: Submit search with empty query

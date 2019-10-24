@@ -16,12 +16,6 @@ public class SearchSteps {
         searchPage.open();
     }
 
-    @Step("Type query into input field")
-    public void typeAndSubmitQuery(String query){
-        searchPage.searchInput.sendKeys(query);
-        searchPage.searchInput.submit();
-    }
-
     @Step("Get article title text")
     public String getTitle(){
         return articlePage.title.getText();
@@ -32,4 +26,25 @@ public class SearchSteps {
         Assertions.assertThat(searchResultPage.errorMessage.isDisplayed());
         Assertions.assertThat(searchResultPage.errorMessage.getText().equalsIgnoreCase(errorText));
     }
+
+    @Step("Verify that empty result page is opened")
+    public void verifyEmptyResultPageIsOpened(){
+        Assertions.assertThat(searchResultPage.searchInput.isDisplayed());
+        Assertions.assertThat(searchResultPage.searchInput.getText().isEmpty());
+    }
+    @Step("Press Enter")
+    public void pressEnter(){
+        searchPage.searchInput.submit();
+    }
+
+    @Step("Type query")
+    public void typeQuery(String query){
+        searchPage.searchInput.sendKeys(query);
+    }
+
+    @Step("Click on the search button")
+    public void clickOnTheSearchButton(){
+        searchPage.searchButton.click();
+    }
+
 }

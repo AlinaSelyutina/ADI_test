@@ -1,5 +1,6 @@
 package stepdefenitions;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -7,7 +8,7 @@ import net.thucydides.core.annotations.Steps;
 import org.assertj.core.api.Assertions;
 import steps.SearchSteps;
 
-public class SearchWikiDefStep {
+public class SearchWikiDefSteps {
 
     @Steps
     SearchSteps searchSteps;
@@ -17,9 +18,19 @@ public class SearchWikiDefStep {
         searchSteps.openPage();
     }
 
-    @When("^I search for (.*)$")
+    @When("^I type (.*)$")
     public void typeQuery(String query){
-        searchSteps.typeAndSubmitQuery(query);
+        searchSteps.typeQuery(query);
+    }
+
+    @And("I press the search button")
+    public void pressOnTheLoopButton(){
+        searchSteps.clickOnTheSearchButton();
+    }
+
+    @And("I press Enter")
+    public void pressEnter(){
+        searchSteps.pressEnter();
     }
 
     @Then("^I get article with title (.*)$")
@@ -30,6 +41,11 @@ public class SearchWikiDefStep {
     @Then("^I get error message(.*)$")
     public void checkErrorMessage(String errorMessage) {
         searchSteps.verifyErrorMessage(errorMessage);
+    }
+
+    @Then("Empty result page is opened")
+    public void checkThatEmptyResultPageIsOpened() {
+        searchSteps.verifyEmptyResultPageIsOpened();
     }
 
 }

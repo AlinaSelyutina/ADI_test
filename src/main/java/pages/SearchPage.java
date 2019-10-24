@@ -9,4 +9,7 @@ import org.openqa.selenium.WebElement;
 public class SearchPage extends PageObject {
     @FindBy(id = "searchInput")
     public WebElement searchInput;
+
+    @FindBy(id = "searchButton")
+    public WebElement searchButton;
 }

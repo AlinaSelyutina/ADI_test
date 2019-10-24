@@ -1,5 +1,5 @@
 # Test Project
-In this project are implemented tests for the searching functionality in https://en.wikipedia.org/ site. In this project were  implemented tests according BDD approach.
+In this project are implemented tests for the searching functionality in https://en.wikipedia.org/ site. In this project were implemented tests according BDD approach.
 
 ## Test Automation architecture consists of 4 layers
 1. Features

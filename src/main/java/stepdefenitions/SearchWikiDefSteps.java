@@ -38,7 +38,7 @@ public class SearchWikiDefSteps {
         Assertions.assertThat((searchSteps.getTitle()).equals(query));
     }
 
-    @Then("^I get error message(.*)$")
+    @Then("^I get error message (.*)$")
     public void checkErrorMessage(String errorMessage) {
         searchSteps.verifyErrorMessage(errorMessage);
     }

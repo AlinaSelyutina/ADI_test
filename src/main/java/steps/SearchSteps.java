@@ -24,7 +24,7 @@ public class SearchSteps {
     @Step("Verify error message is displayed and has the correct text")
     public void verifyErrorMessage(String errorText){
         Assert.assertTrue("Error message should be displayed", searchResultPage.errorMessage.isDisplayed());
-        Assert.assertEquals("Error message should contain expected text", searchResultPage.errorMessage.getText(), errorText.replaceFirst(" ", ""));
+        Assert.assertEquals("Error message should contain expected text", searchResultPage.errorMessage.getText(), errorText);
     }
 
     @Step("Verify that empty result page is opened")

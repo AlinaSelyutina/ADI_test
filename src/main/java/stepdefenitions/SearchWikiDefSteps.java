@@ -24,7 +24,7 @@ public class SearchWikiDefSteps {
     }
 
     @And("I press the search button")
-    public void pressOnTheLoopButton(){
+    public void pressOnTheSearchButton(){
         searchSteps.clickOnTheSearchButton();
     }
 

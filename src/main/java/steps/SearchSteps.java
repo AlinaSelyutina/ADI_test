@@ -1,7 +1,7 @@
 package steps;
 
 import net.thucydides.core.annotations.Step;
-import org.assertj.core.api.Assertions;
+import org.junit.Assert;
 import pages.ArticlePage;
 import pages.SearchPage;
 import pages.SearchResultPage;
@@ -21,16 +21,16 @@ public class SearchSteps {
         return articlePage.title.getText();
     }
 
-    @Step("Verify error message is displayed and has the right text")
+    @Step("Verify error message is displayed and has the correct text")
     public void verifyErrorMessage(String errorText){
-        Assertions.assertThat(searchResultPage.errorMessage.isDisplayed());
-        Assertions.assertThat(searchResultPage.errorMessage.getText().equalsIgnoreCase(errorText));
+        Assert.assertTrue("Error message should be displayed", searchResultPage.errorMessage.isDisplayed());
+        Assert.assertEquals("Error message should contain expected text", searchResultPage.errorMessage.getText(), errorText.replaceFirst(" ", ""));
     }
 
     @Step("Verify that empty result page is opened")
     public void verifyEmptyResultPageIsOpened(){
-        Assertions.assertThat(searchResultPage.searchInput.isDisplayed());
-        Assertions.assertThat(searchResultPage.searchInput.getText().isEmpty());
+        Assert.assertTrue("Result page should be displayed",  searchResultPage.searchInput.isDisplayed());
+        Assert.assertTrue("Search input should be empty", searchResultPage.searchInput.getText().isEmpty());
     }
     @Step("Press Enter")
     public void pressEnter(){

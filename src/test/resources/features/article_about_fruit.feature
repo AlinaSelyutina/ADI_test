@@ -21,7 +21,7 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
 
     Examples:
       | query     | title        |
-      | Carambola | Carambola |
+      | Carambola | Carambola    |
       | Apple     | Apple        |
 
 
@@ -33,11 +33,11 @@ Feature: As a User I want to go to Wikipedia and search for a few fruits
     Then I get error message <error message>
 
     Examples:
-      | query           | error message                            |
-      | edealsdfjself   | There were no results matching the query.|
-      | edealsdf123jself| There were no results matching the query.|
+      | query           |error message                            |
+      | edealsdfjself   |There were no results matching the query.|
+      | edealsdf123jself|There were no results matching the query.|
 
-  @NegativeRegressionSuit
+  @PositiveRegressionSuit
   Scenario: Submit search with empty query
     Given I am on the Wikipedia main page
     When I press Enter

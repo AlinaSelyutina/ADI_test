@@ -15,7 +15,7 @@ There are many advantages of BDD. First of all it allows managers, developers an
 ## Tools
   - **Junit** allows us to run tests
   - **Serenity BDD Framework** allows us get the informative reports about scenarios runs
-  - **Cucmber** allows us run human readable test cases writing in Gherkin
+  - **Cucmber** allows us run the human readable test cases writing in Gherkin
   - **Gradle** is open-source build and automation tool. Thanks to Gradle we can get very scalable and high-performance builds. Also, it's very easy to use.
 
 #### Example of feature:
@@ -53,5 +53,5 @@ public class PositiveTestsRunner {
 ## How to axecute
 1. Clone project
 2. Run gradle.build file
-4. Find report into folder target/site/serenity
+3. Open in browser report index.html into folder target/site/serenity
 5. In addition, you can run tests with runners from test/java/runners package
